@@ -1,0 +1,15 @@
+.addGiffy {
+
+    margin: 3px;
+    background-color: blue;
+    color: white; 
+    width: 1.3rem;
+    height: .5rem;
+}
+
+.gifs {
+
+    height: 2rem;
+    margin: 5px;
+    float: inherit;
+}
