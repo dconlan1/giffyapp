@@ -8,7 +8,7 @@ for (var i=0; i <buttonContent.length; i++){
 
 }
 
-});
+
 
 $(".addGiffy").click(function () {
 
@@ -27,8 +27,9 @@ function callapi(car) {
         //console.log("success got data", response);
         for (var gif of response.data) {
             console.log(gif);
-            $(".buttons").append("<img src=\"" +gif.url+"\"/>");
+            $(".buttons").append("<img src=\"" +gif.embed_url+"\"/>");
             //  https://giphy.com/gifs/lamborghini-ey5ehGCEmFcxW?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=
         }
       }); 
 }
+});
