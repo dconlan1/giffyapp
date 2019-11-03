@@ -8,18 +8,6 @@ for (var i=0; i <buttonContent.length; i++){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 });
 
 $(".addGiffy").click(function () {
@@ -29,8 +17,8 @@ $(".addGiffy").click(function () {
 });
 
 function callapi(car) {
-    //var xhr = $.get("http://api.giphy.com/v1/gifs/search?q="+car+"&api_key=zgzUEeG2OAP1qW04NfZiNbZZv8oilize&limit=10");
-   // xhr.done(function(data) { console.log("success got data", data); });
+    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q="+car+"&api_key=zgzUEeG2OAP1qW04NfZiNbZZv8oilize&limit=10");
+   xhr.done(function(data) { console.log("success got data", data); });
 
     $.ajax({
         url:"http://api.giphy.com/v1/gifs/search?q="+car+"&api_key=zgzUEeG2OAP1qW04NfZiNbZZv8oilize&limit=10",
