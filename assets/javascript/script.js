@@ -15,13 +15,13 @@ $("#addGiffy").click(function () {
 });
 
 function callapi(car) {
-     var xhr = $.get("http://api.giphy.com/v1/gifs/search?q="+car+"&api_key=zgzUEeG2OAP1qW04NfZiNbZZv8oilize&limit=10");
+     var xhr = $.get("https://api.giphy.com/v1/gifs/search?q="+car+"&api_key=zgzUEeG2OAP1qW04NfZiNbZZv8oilize&limit=10");
     xhr.done(function(data) {
         $(".gifs").html("")
         console.log("success got data", data);
         for (var gif of data.data) {
-            console.log(gif.images['480w_still'].url);
-            $(".gifs").append("<div class=\"group\" style=\"display: block;\"><img class=\"moving\" src=\"" +gif.images.downsized_large.url+"\"/><img class=\"still\" style=\"display: none;\" src=\"" +gif.images['480w_still'].url+"\"/></div>");
+            console.log(gif);
+            $(".gifs").append("<div class=\"group\" style=\"display: block;\"><p>Rating: "+gif.rating+"</p><img class=\"moving\" src=\"" +gif.images.downsized_large.url+"\"/><img class=\"still\" style=\"display: none;\" src=\"" +gif.images['480w_still'].url+"\"/></div>");
             //  https://giphy.com/gifs/lamborghini-ey5ehGCEmFcxW?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=
         }
 
